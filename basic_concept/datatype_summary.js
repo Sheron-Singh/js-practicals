@@ -34,10 +34,10 @@ const myFunction = function(){
     console.log("hello");
 };
 
-console.log(typeof bigNumber);
-// console.log(bigNumber);
-console.log(outSideTemp);
-console.log(typeof outSideTemp);
+// console.log(typeof bigNumber);
+// // console.log(bigNumber);
+// console.log(outSideTemp);
+// console.log(typeof outSideTemp);
 
 
 /*
@@ -57,3 +57,47 @@ console.log(typeof outSideTemp);
 
 
 */
+
+
+// *************************** Memory ****************************************
+
+// stack(Primitive), Heap(Non-Primitive)
+
+
+// stack Memory or Primitive ke andar copy milta hai 
+
+// Heap (non-Primitive) ke andar reference me value change hoga (main value change)
+
+/**
+ Primitive Types:
+1. Stored in stack.
+2. Passed or assigned by value (call by value).
+3. Changes to copies don't affect the original.
+
+Reference Types:
+1. Stored in heap; accessed via references (stored in stack).
+2. Changing the value through another reference affects the original.
+ */
+
+
+let myName = "SheronSingh";
+ let anotherName = myName;
+
+ anotherName ="Sheron Sheron"
+
+ console.log(myName);
+ console.log(anotherName);
+ 
+ let userOne ={
+    email : "sheron@gmail.com",
+    name : "Singh Singh"
+ }
+
+ let userTwo = userOne;
+
+ userTwo.email = "singh@gmail.com"
+
+ console.log(userOne.email);
+ 
+ console.log(userTwo.email);
+ 
